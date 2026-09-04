@@ -23,32 +23,34 @@ define('APP_NAME', 'MyPortfolio');
 
 define(
     'BASE_URL',
-    'http://localhost/myportfolio'
+    // 'http://localhost/myportfolio'
+    'https://myportfolioapp.up.railway.app'
 );
-
-
-// /*
-// |--------------------------------------------------------------------------
-// | Database
-// |--------------------------------------------------------------------------
-// */
-
-// define('DB_HOST', '127.0.0.1');
-// define('DB_NAME', 'myportfolio');
-// define('DB_USER', 'root');
-// define('DB_PASS', '');
 
 
 /*
 |--------------------------------------------------------------------------
-| Database INFINITY FREE
+| Database
 |--------------------------------------------------------------------------
 */
 
-define('DB_HOST', 'sql107.infinityfree.com');
-define('DB_NAME', 'if0_42829624_myportfolio');
-define('DB_USER', 'if0_42829624');
-define('DB_PASS', 'xPCSgetKgL');
+define('DB_HOST', getenv('MYSQLHOST') ?: '127.0.0.1');
+define('DB_NAME', getenv('MYSQLDATABASE') ?: 'myportfolio');
+define('DB_USER', getenv('MYSQLUSER') ?: 'root');
+define('DB_PASS', getenv('MYSQLPASSWORD') ?: '');
+
+// /*
+// |--------------------------------------------------------------------------
+// | Database RAILWAy
+// |--------------------------------------------------------------------------
+// */
+
+// define('DB_HOST', 'altaria.proxy.rlwy.net');
+// define('DB_NAME', 'myportfolio');
+// define('DB_USER', 'root');
+// define('DB_PASS', 'xpyCeSjhNlWLwDfKCLMBaYaIwdSrAxck');
+
+
 
 /*
 |--------------------------------------------------------------------------
