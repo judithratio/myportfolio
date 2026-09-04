@@ -24,7 +24,7 @@ define('APP_NAME', 'MyPortfolio');
 define(
     'BASE_URL',
     // 'http://localhost/myportfolio'
-    'https://myportfolioapp.up.railway.app'
+    'https://mywebportfolio.free.je'
 );
 
 
