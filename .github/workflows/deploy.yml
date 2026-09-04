@@ -36,7 +36,6 @@ jobs:
           protocol: ftp
           port: 21
           server-dir: /htdocs/
-          timeout-minutes: 120
           local-dir: ./
           exclude: |
             **/.git*
