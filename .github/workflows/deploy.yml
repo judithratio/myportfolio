@@ -46,3 +46,4 @@ jobs:
             **/.env
             **/.env.*
             **/.ftp-deploy-sync-state.json
+            **/README.md
