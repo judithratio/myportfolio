@@ -1,0 +1,33 @@
+RewriteEngine On
+
+# ============================================================
+# EXISTING FILES AND DIRECTORIES
+# ============================================================
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+
+# ============================================================
+# USERNAME-BASED PUBLIC PORTFOLIO
+# ============================================================
+#
+# Example:
+# /judith
+#
+# becomes:
+# portfolio.php?username=judith
+#
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([a-zA-Z0-9-]+)/?$ portfolio.php?username=$1 [L,QSA]
+
+
+# ============================================================
+# CUSTOM 404
+# ============================================================
+
+ErrorDocument 404 /myportfolio/404.php
