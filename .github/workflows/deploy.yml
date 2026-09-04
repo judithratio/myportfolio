@@ -30,12 +30,13 @@ jobs:
       - name: Deploy to InfinityFree via FTP
         uses: step-security/ftp-deploy-action@v4
         with:
-          server: ftpupload.net
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.INFINITYFREE_FTP_USERNAME }}
           password: ${{ secrets.INFINITYFREE_FTP_PASSWORD }}
           protocol: ftp
           port: 21
           server-dir: /htdocs/
+          timeout: 600000
           local-dir: ./
           exclude: |
             **/.git*
